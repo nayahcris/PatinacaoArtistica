@@ -41,7 +41,7 @@ public class Patinador implements Serializable {
 		this.id = id;
 	}
 
-	@Column (name = "nome_patinador", length = 50, nullable = false)
+	//@Column (name = "nome_patinador", length = 50, nullable = false)
 	public String getNome() {
 		return nome;
 	}
@@ -49,7 +49,7 @@ public class Patinador implements Serializable {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	@Column (name = "pais_patinador", length = 50, nullable = false)
+	//@Column (name = "pais_patinador", length = 50, nullable = false)
 	public String getPaisDeOrigem() {
 		return paisDeOrigem;
 	}
@@ -59,7 +59,7 @@ public class Patinador implements Serializable {
 	}
 
 
-	@Column (name = "genero_patinador", length = 30, nullable = false)
+	//@Column (name = "genero_patinador", length = 30, nullable = false)
 	public String getGenero() {
 		return genero;
 	}
@@ -69,7 +69,7 @@ public class Patinador implements Serializable {
 	}
 	
 	
-	@Column (name = "nota_j1",  nullable = false)
+	//@Column (name = "nota_j1",  nullable = false)
 	public Nota getNotaJ1() {
 		return notaJ1;
 	}
@@ -79,7 +79,7 @@ public class Patinador implements Serializable {
 	}
 
 
-	@Column (name = "nota_j2",  nullable = false)
+	//@Column (name = "nota_j2",  nullable = false)
 	public Nota getNotaJ2() {
 		return notaJ2;
 	}
@@ -89,7 +89,7 @@ public class Patinador implements Serializable {
 	}
 	
 	
-	@Column (name = "nota_j3",  nullable = false)
+	//@Column (name = "nota_j3",  nullable = false)
 	public Nota getNotaJ3() {
 		return notaJ3;
 	}
@@ -100,7 +100,7 @@ public class Patinador implements Serializable {
 	}
 
 
-	@Column (name = "nota_j4",  nullable = false)
+	//@Column (name = "nota_j4",  nullable = false)
 	public Nota getNotaJ4() {
 		return notaJ4;
 	}
@@ -111,7 +111,7 @@ public class Patinador implements Serializable {
 	}
 
 
-	@Column (name = "nota_j5",  nullable = false)
+	//@Column (name = "nota_j5",  nullable = false)
 	public Nota getNotaJ5() {
 		return notaJ5;
 	}
@@ -121,7 +121,7 @@ public class Patinador implements Serializable {
 	}
 
 
-	@Column (name= "nota_total")
+	//@Column (name= "nota_total")
 	public float getNotaTotal() {
 		return notaTotal;
 	}
