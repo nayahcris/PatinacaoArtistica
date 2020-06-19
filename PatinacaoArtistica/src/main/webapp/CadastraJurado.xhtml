@@ -19,25 +19,25 @@
 		<p:panelGrid columns="2">
 			<p:outputLabel value="Nome" for="nome" />
 			<p:inputText id="nome"
-				value="#{CadastraPatinadorMBean.patinador.nome}" required="true"
+				value="#{CadastraJuradoMBean.jurado.nome}" required="true"
 				requiredMessage="Nome obrigatório." />
 			<p:outputLabel value="País de Origem" for="paisDeOrigem" />
 			<p:inputText id="paisDeOrigem"
-				value="#{CadastraPatinadorMBean.patinador.paisDeOrigem}" required="true"
+				value="#{CadastraJuradoMBean.jurado.paisDeOrigem}" required="true"
 				requiredMessage="País obrigatório."/>
 			<p:outputLabel value="Genero" for="genero" />
 			<p:inputText id="genero"
-				value="#{CadastraPatinadorMBean.patinador.genero}" required="true"
+				value="#{CadastraJuradoMBean.jurado.genero}" required="true"
 				requiredMessage="Gênero obrigatório."/>
 			<p:outputLabel />
 			<p:commandButton value="Colocar na lista"
-				action="#{CadastraPatinadorMBean.inserir}" update="@form" />
+				action="#{CadastraJuradoMBean.inserir}" update="@form" />
 		</p:panelGrid>
 		<br />
-		<p:dataTable var="item" value="#{CadastraPatinadorMBean.patinadores}"
-			emptyMessage="Lista de Patinadores Está vazia!" paginator="true"
+		<p:dataTable var="item" value="#{CadastraJuradoMBean.jurado}"
+			emptyMessage="Lista de Jurados está vazia!" paginator="true"
 			paginatorAlwaysVisible="false" rows="5" paginatorPosition="bottom">
-			<p:column headerText="Patinadores">
+			<p:column headerText="Jurados">
 				<p:outputLabel value="#{item.nome}" />
 			</p:column>
 			<p:column headerText="País de Origem">
