@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title></title>
+</h:head>
+
+<h:body>
+	<h:form>
+		<p:messages />
+		<h1>Lista de Patinadores</h1>
+		<br />
+		<p:panelGrid columns="2">
+			<p:outputLabel value="Nome do Patinador" for="patinador" />
+			<p:inputText id="patinador"
+				value="#{CadastraNotaMBean.nota.patinador}" required="true"
+				requiredMessage="Nome do Patinador obrigatório." />
+				
+			<p:outputLabel value="Nome do Jurado" for="jurado" />
+			<p:inputText id="jurado"
+				value="#{CadastraNotaMBean.nota.jurado}" required="true"
+				requiredMessage="Nome do Jurado obrigatório." />
+				
+			<p:outputLabel value="Composição" for="composicao" />
+			<p:inputNumber id="composicao"
+				value="#{listaNotaMBean.nota.composicao}" />
+				
+			<p:outputLabel value="Velocidade" for="velocidade" />	
+			<p:inputNumber id="velocidade"
+				value="#{listaNotaMBean.nota.velocidade}" />
+				
+			<p:outputLabel value="Utilizacao Do Gelo" for="utilizacaoDoGelo" />	
+			<p:inputNumber id="utilizacaoDoGelo"
+				value="#{listaNotaMBean.nota.utilizacaoDoGelo}" />
+			
+			<p:outputLabel value="Movimentos" for="movimentos" />	
+			<p:inputNumber id="movimentos"
+				value="#{listaNotaMBean.nota.movimentos}" />
+				
+			<p:outputLabel value="Postura e Estilo" for="posturaEstilo" />	
+			<p:inputNumber id="posturaEstilo"
+				value="#{listaNotaMBean.nota.posturaEstilo}" />
+				
+			<p:outputLabel value="Expressividade Musical" for="expressividadeMusical" />	
+			<p:inputNumber id="expressividadeMusical"
+				value="#{listaNotaMBean.nota.expressividadeMusical}" />
+			
+			<p:outputLabel />
+			<p:commandButton value="Colocar na lista"
+				action="#{CadastraNotaMBean.inserir}" update="@form" />
+		</p:panelGrid>
+		<br />
+		<p:dataTable var="item" value="#{CadastraNotaMBean.jurado}"
+			emptyMessage="Lista de Notas está vazia!" paginator="true"
+			paginatorAlwaysVisible="false" rows="5" paginatorPosition="bottom">
+			<p:column headerText="Patinador">
+				<p:outputLabel value="#{item.patinador}" />
+			</p:column>
+			<p:column headerText="Jurado">
+				<p:outputLabel value="#{item.jurado}" />
+			</p:column>
+			<p:column headerText="Composição">
+				<p:outputLabel value="#{item.composicao}" />
+			</p:column>
+			<p:column headerText="Velocidade">
+				<p:outputLabel value="#{item.velocidade}" />
+			</p:column>
+			<p:column headerText="Utilização do Gelo">
+				<p:outputLabel value="#{item.utilizacaoDoGelo}" />
+			</p:column>
+			<p:column headerText="Movimentos">
+				<p:outputLabel value="#{item.movimentos}" />
+			</p:column>
+			<p:column headerText="Postura e Estilo">
+				<p:outputLabel value="#{item.posturaEstilo}" />
+			</p:column>
+			<p:column headerText="Expressividade Musical">
+				<p:outputLabel value="#{item.expressividadeMusical}" />
+			</p:column>
+		</p:dataTable>
+	</h:form>
+</h:body>
+
+</html>
