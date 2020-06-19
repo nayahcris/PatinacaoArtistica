@@ -26,7 +26,10 @@ public class Patinador implements Serializable {
 	private Nota notaJ5;
 	private float notaTotal; 
 	
-	public Patinador() {}
+	public Patinador() {
+		
+		super();
+	}
 
 	@Id
 	@GeneratedValue(generator = "inc")
@@ -69,7 +72,7 @@ public class Patinador implements Serializable {
 	}
 	
 	
-	//@Column (name = "nota_j1",  nullable = false)
+	//@Column (name = "nota_j1")
 	public Nota getNotaJ1() {
 		return notaJ1;
 	}
@@ -79,7 +82,7 @@ public class Patinador implements Serializable {
 	}
 
 
-	//@Column (name = "nota_j2",  nullable = false)
+	//@Column (name = "nota_j2")
 	public Nota getNotaJ2() {
 		return notaJ2;
 	}
@@ -89,7 +92,7 @@ public class Patinador implements Serializable {
 	}
 	
 	
-	//@Column (name = "nota_j3",  nullable = false)
+	//@Column (name = "nota_j3")
 	public Nota getNotaJ3() {
 		return notaJ3;
 	}
@@ -100,7 +103,7 @@ public class Patinador implements Serializable {
 	}
 
 
-	//@Column (name = "nota_j4",  nullable = false)
+	//@Column (name = "nota_j4")
 	public Nota getNotaJ4() {
 		return notaJ4;
 	}
@@ -111,7 +114,7 @@ public class Patinador implements Serializable {
 	}
 
 
-	//@Column (name = "nota_j5",  nullable = false)
+	//@Column (name = "nota_j5")
 	public Nota getNotaJ5() {
 		return notaJ5;
 	}

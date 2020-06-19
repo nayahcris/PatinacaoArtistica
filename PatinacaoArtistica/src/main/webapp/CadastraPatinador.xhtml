@@ -23,7 +23,12 @@
 				requiredMessage="Nome obrigatório." />
 			<p:outputLabel value="País de Origem" for="pais" />
 			<p:inputText id="pais"
-				value="#{listaCadastraPatinadorMBean.patinador.pais}" />
+				value="#{listaCadastraPatinadorMBean.patinador.pais}" required="true"
+				requiredMessage="País obrigatório."/>
+			<p:outputLabel value="Genero" for="genero" />
+			<p:inputText id="genero"
+				value="#{listaCadastraPatinadorMBean.patinador.genero}" required="true"
+				requiredMessage="Gênero obrigatório."/>
 			<p:outputLabel />
 			<p:commandButton value="Colocar na lista"
 				action="#{listaCadastraPatinadorMBean.inserir}" update="@form" />
@@ -37,6 +42,9 @@
 			</p:column>
 			<p:column headerText="País de Origem">
 				<p:outputLabel value="#{item.pais}" />
+			</p:column>
+			<p:column headerText="Gênero">
+				<p:outputLabel value="#{item.genero}" />
 			</p:column>
 		</p:dataTable>
 	</h:form>
